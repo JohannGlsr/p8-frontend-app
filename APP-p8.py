@@ -9,7 +9,7 @@ def main():
     image_file = st.file_uploader("Sélectionnez une image", type=['jpg', 'jpeg', 'png'])
     if image_file is not None:
         files = {'image': image_file}
-        response = requests.post('http://127.0.0.1:5000/predict', files=files)
+        response = requests.post('https://azure-p8-api.azurewebsites.net/predict', files=files)
         if response.status_code == 200:
             st.success('Image segmentée avec succès.')
             flipped_image_bytes = response.content
