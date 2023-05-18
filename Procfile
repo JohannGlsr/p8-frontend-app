@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run frontend-app-p8.py
+web: sh setup.sh && streamlit run APP-p8.py
